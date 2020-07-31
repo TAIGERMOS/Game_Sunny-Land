@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collection
+  - Cherry
+  - Gem
   layers:
   - Default
   - TransparentFX
@@ -44,6 +46,15 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 73229607
+    locked: 0
+  - name: Environment
+    uniqueID: 833402667
+    locked: 0
+  - name: Ground
+    uniqueID: 3078936143
+    locked: 0
+  - name: Player
+    uniqueID: 3312191831
     locked: 0
   - name: Frontground
     uniqueID: 838904791

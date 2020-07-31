@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
     public float jumpforce; //变量：跳跃的力
     public LayerMask ground;    //获取地面
 
-    public int CherryNum = 0;   //变量：吃到的樱桃变量
+    public int CherryNum = 0;   //变量：吃到的樱桃数量
+    public int GemNum = 0;  //变量：吃到的宝石数量
 
 
     
@@ -75,10 +76,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //吃到收集物，记录收集物数量并销毁收集物
     private void OnTriggerEnter2D(Collider2D item) {
-        if(item.tag == "Collection"){
+        if(item.tag == "Cherry"){
             Destroy(item.gameObject); //销毁当前游戏体
-            CherryNum = CherryNum + 1;
+            CherryNum = CherryNum + 1;  //樱桃数量 +1
+        }
+
+        if(item.tag == "Gem"){
+            Destroy(item.gameObject);   //销毁当前游戏体
+            GemNum = GemNum + 1;    //宝石数量 +1
         }
     }
 
